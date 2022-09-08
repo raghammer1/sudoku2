@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sudoku play</title>
+  </head>
+  <body>
+    <div id="mod" class="modal hidden">
+      <button id="close-btn" class="close-modal">&times;</button>
+      <h1>How to Setup</h1>
+      <p>
+        1. To setup you sudoku or give the sudoku you want to be solved pick the
+        numbers from the numbers panel then place them as per the question
+        sudoku
+      </p>
+      <p>
+        2. If you place a number and don't want it there anymore or want to
+        replace it then choose E and click there to remove it and then can
+        replace it as well
+      </p>
+      <p>
+        3. Now finally to get it solved click on the solve now button and the
+        solution will be presented
+      </p>
+      <p>
+        4. if you want to reset the whole grid to empty again press on the reset
+        same button
+      </p>
+    </div>
+    <div id="over" class="overlay hidden"></div>
+
+    <h1 id="headText" class="head">Give a Sudoku</h1>
+    <hr class="line" />
+    <div class="sec-head">
+      <button id="rules" class="hint-btn">Rules</button>
+    </div>
+    <hr class="line2" />
+    <!-- board -->
+    <div id="board"></div>
+    <br />
+    <div id="digits" class="digit"></div>
+    <button id="reset" class="submit-btn">Reset</button>
+    <button id="solve" class="submit-btn">Solve Now</button>
+  </body>
+</html>

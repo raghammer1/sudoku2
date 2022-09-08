@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sec-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.line {
+  margin: 0 auto;
+  width: 500px;
+  height: 2px;
+}
+
+.hint-btn {
+  font-size: 20px;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.sec-head-mistakes {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.line2 {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+#board {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.615);
+}
+
+#digits {
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgb(177, 177, 177, 0.5);
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  width: 44px;
+  height: 44px;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  align-items: center;
+}
+
+.horizontal-border {
+  border-bottom: 1px solid black;
+}
+
+.vertical-border {
+  border-right: 1px solid black;
+}
+
+.number-selected {
+  background-color: lightgrey;
+}
+
+.tile-selected {
+  background-color: rgb(211, 211, 211, 0.5);
+}
+
+.make-thin {
+  font-weight: 400;
+}
+
+.submit-btn {
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 20px;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  border-radius: 100px;
+  width: 250px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.digit {
+  cursor: pointer;
+}
+
+.incorrect-sud {
+  background-color: rgb(255, 0, 0, 0.9);
+  transition: all 0.5s;
+}
+
+.game-solved {
+  background-color: rgb(8, 216, 8);
+  transition: all 0.5s;
+}
+
+.no-solution {
+  background-color: yellow;
+  transition: all 0.5s;
+}
+
+.white-back {
+  background-color: white;
+}
+
+.grey-back {
+  background-color: rgba(128, 128, 128, 0.459);
+}
+
+.blink-bg {
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  animation: blinkingBackground 1s;
+  border-radius: 100%;
+}
+@keyframes blinkingBackground {
+  0% {
+    background-color: #10c018;
+  }
+  25% {
+    background-color: #1056c0;
+  }
+  50% {
+    background-color: #ef0a1a;
+  }
+  75% {
+    background-color: #254878;
+  }
+  100% {
+    background-color: #04a1d5;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  font: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.5s;
+}
+
+.modal p {
+  margin-top: 25px;
+}

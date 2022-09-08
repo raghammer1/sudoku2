@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.385)),
+    url(back-img.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.sudoku-game-header-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sudoku-game-header-primary {
+  font-size: 100px;
+  margin: 150px 0 100px 0;
+  font-weight: 600;
+}
+
+.sudoku-game-header-link:link,
+.sudoku-game-header-link:visited {
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+  padding: 20px 150px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 90px;
+  transition: all 0.3s;
+}
+
+.sudoku-game-header-link:hover,
+.sudoku-game-header-link:active {
+  background-color: rgb(255, 255, 255, 1);
+}
+
+.sudoku-game-header-link:last-child {
+  margin-bottom: 0px;
+}

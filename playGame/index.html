@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sudoku play</title>
+  </head>
+  <body>
+    <div id="mod" class="modal hidden">
+      <button id="close-btn" class="close-modal">&times;</button>
+      <h1>Rules</h1>
+      <p>
+        1. All the grey boxes are pre-filled numbers and the new numbers that
+        you fill won't have any background colour
+      </p>
+      <p>
+        2. To fill a new number in the sudoku board please choose the number you
+        wish to fill from the below numbers panel, then click on the board where
+        you want to fill
+      </p>
+      <p>
+        3. If the number is incorrect the box will flash red and the number will
+        disappear plus a <i>MISTAKE</i> will be added
+      </p>
+      <p>4. If you get 5 mistakes the game will END</p>
+      <p>
+        5. You also get hints in this game which you can trigger by either
+        pressing H key on your keyboard or by clicking on the on screen hint
+        button
+      </p>
+      <p>
+        6. Once you have finished the game, you can click on the submit button
+      </p>
+      <p>
+        7. Reset same game will reset the same game for you but now with only
+        one hint as it is a retry
+      </p>
+      <p>
+        8. Solve button will give you a possible solution for the present sudoku
+        board
+      </p>
+      <p>9. And finally the New game button will start a new game for you</p>
+    </div>
+    <div id="over" class="overlay hidden"></div>
+
+    <h1 class="head">Play Sudoku</h1>
+    <hr class="line" />
+    <div class="sec-head">
+      <a class="sec-head-mistakes">Mistakes:</a>
+      <h2 id="incorrect">0</h2>
+      <button id="hint" class="hint-btn">Hint :</button>
+      <h2 id="hints">5</h2>
+      <button id="rules" class="hint-btn">Rules</button>
+    </div>
+    <hr class="line2" />
+    <div id="board"></div>
+    <br />
+    <div id="digits" class="digit"></div>
+    <button id="submit" class="submit-btn">Submit</button>
+    <button id="reset" class="submit-btn">Reset same game</button>
+    <button id="solve" class="submit-btn">Solve</button>
+    <button id="restart" class="submit-btn">New game</button>
+  </body>
+</html>
