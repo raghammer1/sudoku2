@@ -221,3 +221,7 @@ h1 {
 .modal p {
   margin-top: 25px;
 }
+
+.hidden2 {
+  display: none;
+}
