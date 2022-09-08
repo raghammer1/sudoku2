@@ -6655,14 +6655,14 @@ function setGame() {
           if (solution[i][j] !== document.getElementById(id).innerText) {
             document.body.classList.add('game-lost');
             document.querySelector('.head').innerText = 'Game lost';
-            document.getElementById('submit').classList.add('hidden');
-            document.getElementById('solve').classList.add('hidden');
-            document.getElementById('restart').classList.remove('hidden');
+            document.getElementById('submit').classList.add('hidden2');
+            document.getElementById('solve').classList.add('hidden2');
+            document.getElementById('restart').classList.remove('hidden2');
             document.getElementById('digits').innerHTML = '';
             numSelected = null;
             tileSelected = null;
-            document.querySelector('.hint-btn').classList.add('hidden');
-            document.querySelector('#hints').classList.add('hidden');
+            document.querySelector('.hint-btn').classList.add('hidden2');
+            document.querySelector('#hints').classList.add('hidden2');
             return;
           }
         }
@@ -6670,8 +6670,8 @@ function setGame() {
     }
     document.body.classList.add('game-won');
     document.querySelector('.head').innerText = 'Game won';
-    document.getElementById('submit').classList.add('hidden');
-    document.getElementById('solve').classList.add('hidden');
+    document.getElementById('submit').classList.add('hidden2');
+    document.getElementById('solve').classList.add('hidden2');
     document.getElementById('digits').innerHTML = '';
   });
   document.querySelector('.hint-btn').addEventListener('click', function () {
@@ -6687,10 +6687,10 @@ function setGame() {
     }
     document.body.classList.add('game-solved-by-AI');
     document.querySelector('.head').innerText = 'Try again';
-    document.getElementById('submit').classList.add('hidden');
-    document.getElementById('solve').classList.add('hidden');
+    document.getElementById('submit').classList.add('hidden2');
+    document.getElementById('solve').classList.add('hidden2');
     document.getElementById('digits').innerHTML = '';
-    document.getElementById('restart').classList.remove('hidden');
+    document.getElementById('restart').classList.remove('hidden2');
     numSelected = null;
     tileSelected = null;
   });
@@ -6707,22 +6707,22 @@ function setGame() {
     hint = 1;
     document.getElementById('hints').innerText = hint;
     document.querySelector('.head').innerText = 'Game Reset';
-    if (document.querySelector('.hint-btn').classList.contains('hidden')) {
-      document.querySelector('.hint-btn').classList.remove('hidden');
-      document.querySelector('#hints').classList.remove('hidden');
+    if (document.querySelector('.hint-btn').classList.contains('hidden2')) {
+      document.querySelector('.hint-btn').classList.remove('hidden2');
+      document.querySelector('#hints').classList.remove('hidden2');
     }
     if (document.body.classList.contains('game-solved-by-AI')) {
       document.body.classList.remove('game-solved-by-AI');
-      document.getElementById('submit').classList.remove('hidden');
-      document.getElementById('solve').classList.remove('hidden');
+      document.getElementById('submit').classList.remove('hidden2');
+      document.getElementById('solve').classList.remove('hidden2');
     } else if (document.body.classList.contains('game-lost')) {
       document.body.classList.remove('game-lost');
-      document.getElementById('submit').classList.remove('hidden');
-      document.getElementById('solve').classList.remove('hidden');
+      document.getElementById('submit').classList.remove('hidden2');
+      document.getElementById('solve').classList.remove('hidden2');
     } else if (document.body.classList.contains('game-won')) {
       document.body.classList.remove('game-won');
-      document.getElementById('submit').classList.remove('hidden');
-      document.getElementById('solve').classList.remove('hidden');
+      document.getElementById('submit').classList.remove('hidden2');
+      document.getElementById('solve').classList.remove('hidden2');
     }
     numSelected = null;
     tileSelected = null;
@@ -6822,8 +6822,8 @@ function selectTile() {
             if (solution[i][j] !== document.getElementById(id).innerText) {
               document.body.classList.add('game-lost');
               document.querySelector('.head').innerText = 'Game lost';
-              document.getElementById('submit').classList.add('hidden');
-              document.getElementById('restart').classList.remove('hidden');
+              document.getElementById('submit').classList.add('hidden2');
+              document.getElementById('restart').classList.remove('hidden2');
               document.getElementById('digits').innerHTML = '';
               numSelected = null;
               tileSelected = null;
